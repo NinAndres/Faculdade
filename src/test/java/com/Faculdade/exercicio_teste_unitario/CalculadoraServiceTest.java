@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.Faculdade.exercicio_teste_unitario.service.CalculadoraService;
@@ -16,6 +17,7 @@ import com.Faculdade.exercicio_teste_unitario.service.CalculadoraService;
 @SpringBootTest
 public class CalculadoraServiceTest {
 
+  @Autowired
   private CalculadoraService service;
 
   @Test

@@ -2,6 +2,9 @@ package com.Faculdade.exercicio_teste_unitario.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class CalculadoraService {
 
   public Float somaLista(List<Float> numeros) {
