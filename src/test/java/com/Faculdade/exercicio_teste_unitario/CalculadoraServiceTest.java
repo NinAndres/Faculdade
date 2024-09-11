@@ -46,4 +46,13 @@ public class CalculadoraServiceTest {
     assertNotEquals(new Float[] { 4.4f, 2.2f }, resultado);
   }
 
+  @Test
+  @DisplayName("Funcao que testa a implementacao de contar os numeros repetidos da service")
+  public void testContarRepetidos() {
+    List<Float> numeros = Arrays.asList(1.0f, 2.0f, 3.0f, 2.0f, 4.0f, 1.0f, 5.0f);
+    List<String> esperado = Arrays.asList("1.0 aparece 2 vezes", "2.0 aparece 2 vezes");
+    List<String> resultado = service.contarRepetidos(numeros);
+    assertEquals(esperado, resultado);
+  }
+
 }

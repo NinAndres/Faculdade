@@ -1,5 +1,6 @@
 package com.Faculdade.exercicio_teste_unitario.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -37,5 +38,29 @@ public class CalculadoraService {
 
     }
     return new Float[] { max, min };
+  }
+
+  public List<String> contarRepetidos(List<Float> numeros) {
+    List<String> repetidos = new ArrayList<>();
+    List<Float> verificados = new ArrayList<>();
+
+    for (int i = 0; i < numeros.size(); i++) {
+      Float num = numeros.get(i);
+
+      if (!verificados.contains(num)) {
+        int count = 0;
+        for (Float n : numeros) {
+          if (n.equals(num)) {
+            count++;
+          }
+        }
+        if (count > 1) {
+          repetidos.add(num + " aparece " + count + " vezes");
+          verificados.add(num);
+        }
+      }
+    }
+
+    return repetidos;
   }
 }
